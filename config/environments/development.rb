@@ -37,11 +37,23 @@ Rails.application.configure do
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
-
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  ## Cors Config ##
+  config.middleware.insert_before 0, Rack::Cors do
+    # allow all origins in development
+    allow do
+      origins '*'
+      resource '*',
+               headers: :any,
+               methods: %i[get post delete put options],
+               expose: ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+               max_age: 0
+    end
+  end
 end
