@@ -1,24 +1,6 @@
-# README
+# Devise Token Auth & Carrierwave Sandbox
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The purpose of this repo is to practice working with Devise Token Auth & Carrierwave.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Devise Token Auth: https://github.com/lynndylanhurley/devise_token_auth  
+* Carrierwave: https://github.com/carrierwaveuploader/carrierwave
