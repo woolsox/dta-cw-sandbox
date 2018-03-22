@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
   def update_avatar
     byebug
-    user = User.find(params[:id])
+    user = User.find(3)
+    image = Image.create(imageable_id: 3,
+                         imageable_type: 'User',
+                         remote_file_url: params[:remote_file_url])
+
     render json: user
   end
 
